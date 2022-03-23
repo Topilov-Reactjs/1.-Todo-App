@@ -1,0 +1,136 @@
+.home .content .result .body {
+    height: 90%;
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    padding-bottom: 20px;
+
+    .body-inside {
+        height: 90%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+        padding-bottom: 20px;
+        max-height: 90%;
+        margin-top: 20px;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        border-radius: 0 0 5px 5px;
+        box-sizing: border-box;
+
+        .items {
+            background-color: var(--primaryBackground);
+            border-radius: 5px 5px 0 0;
+            height: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+
+            .item {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 12px 50px;
+                background-color: var(--inputBackgroundColor);
+                border: none;
+                outline: none;
+                font-size: 16px;
+                color: var(--inputColor);
+                caret-color: var(--inputCursorColor);
+                letter-spacing: 1.5px;
+                line-height: 30px;
+
+                position: relative;
+
+                .circle {
+                    width: 20px;
+                    height: 20px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: calc(50% - 10px);
+                    left: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                }
+
+                .close {
+                    width: 20px;
+                    height: 20px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: calc(50% - 10px);
+                    right: 15px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    transition: 0.2s linear;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .body-bottom {
+            user-select: none;
+            background-color: var(--primaryBackground);
+            border-radius: 0 0 5px 5px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .text:first-of-type {
+                opacity: 0.5;
+            }
+
+            .text {
+                color: var(--inputColor);
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .tabs {
+                display: flex;
+
+                @media screen and (max-width: 640px) {
+                    display: none;
+                }
+
+                .tab {
+                    margin: 0 10px;
+                    font-weight: 700;
+                    opacity: 0.5;
+                    cursor: pointer;
+                    transition: 0.2s linear;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    &.active {
+                        color: rgb(0, 0, 255);
+
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+
+            .clear-completed {
+                cursor: pointer;
+                transition: 0.2s linear;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

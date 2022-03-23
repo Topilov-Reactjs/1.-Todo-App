@@ -1,0 +1,110 @@
+.home {
+    height: 100vh;
+    position: relative;
+
+    .top {
+        height: calc(100% / 3);
+        padding: 3% 2.5% 0;
+        box-sizing: border-box;
+        background-image: var(--topBackgroundDesktop);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 640px) {
+            background-image: var(--topBackgroundMobile);
+        }
+    }
+
+    .bottom {
+        height: calc(100% / 3 * 2);
+        padding: 0 2.5%;
+        box-sizing: border-box;
+        background-color: var(--primaryBackground);
+    }
+
+    .content {
+        position: absolute;
+        top: 5%;
+        left: calc(50% - 300px);
+        width: 600px;
+        height: 95%;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 640px) {
+            width: 95%;
+            left: 2.5%;
+        }
+
+        .top-part {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+                color: #fff;
+                font-size: 2rem;
+                letter-spacing: 1rem;
+                font-weight: 700;
+            }
+
+            .theme {
+                cursor: pointer;
+            }
+        }
+
+        .search-part {
+            width: 100%;
+            position: relative;
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 12px 20px 12px 50px;
+                background-color: var(--inputBackgroundColor);
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                font-family: Josefin, sans-serif;
+                font-size: 16px;
+                color: var(--inputColor);
+                caret-color: var(--inputCursorColor);
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                border-radius: 50%;
+                position: absolute;
+                top: calc(50% - 10px);
+                left: 15px;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+        }
+
+        .result {
+            height: calc(100% - 140.6px);
+            border-radius: 5px;
+
+            // Body Here...
+
+            .footer {
+                height: 10%;
+                overflow-y: auto;
+                box-sizing: border-box;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                color: var(--inputColor);
+                opacity: 0.5;
+            }
+        }
+    }
+}

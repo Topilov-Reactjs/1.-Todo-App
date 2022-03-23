@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+$veryLightGray: hsl(0, 0%, 98%);
+$veryLightGrayishBlue: hsl(236, 33%, 92%);
+$lightGrayishBlue: hsl(233, 11%, 84%);
+$darkGrayishBlue: hsl(236, 9%, 61%);
+$veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+[data-theme="dark"] {
+    $veryDarkBlue: hsl(235, 21%, 11%);
+    $veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    $LightGrayishBlue: hsl(234, 39%, 85%);
+    $LightGrayishBlueHover: hsl(236, 33%, 92%);
+    $DarkGrayishBlue: hsl(234, 11%, 52%);
+    $VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    $VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+:root {
+    --topBackgroundDesktop: url('../images/bg-desktop-light.jpg');
+    --topBackgroundMobile: url('../images/bg-mobile-light.jpg');
+    --primaryBackground: hsl(0, 0%, 98%);
+    --inputColor: hsl(235, 24%, 19%);
+    --inputBackgroundColor: hsl(0, 0%, 98%);
+    --inputCursorColor: hsl(235, 24%, 19%);
+}
+
+[data-theme="dark"] {
+    --topBackgroundDesktop: url('../images/bg-desktop-dark.jpg');
+    --topBackgroundMobile: url('../images/bg-mobile-dark.jpg');
+    --primaryBackground: hsl(235, 21%, 11%);
+    --inputColor: hsl(0, 0%, 98%);
+    --inputBackgroundColor: hsl(235, 24%, 19%);
+    --inputCursorColor: rgb(0, 0, 255);
+}
+
+body {
+    margin: 0;
+
+    font: {
+        family: Josefin, sans-serif;
+        size: 18px;
+        weight: 400
+    }
+
+    ;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+// Scroll Bar
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .9);
+}
