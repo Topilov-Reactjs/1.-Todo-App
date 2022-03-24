@@ -9,6 +9,7 @@
         background-image: var(--topBackgroundDesktop);
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        transition: 0.2s linear;
 
         @media screen and (max-width: 640px) {
             background-image: var(--topBackgroundMobile);
@@ -20,6 +21,7 @@
         padding: 0 2.5%;
         box-sizing: border-box;
         background-color: var(--primaryBackground);
+        transition: 0.2s linear;
     }
 
     .content {
@@ -94,7 +96,6 @@
             // Body Here...
 
             .footer {
-                height: 10%;
                 overflow-y: auto;
                 box-sizing: border-box;
                 text-align: center;
@@ -104,6 +105,10 @@
                 font-size: 15px;
                 color: var(--inputColor);
                 opacity: 0.5;
+                padding: 0 0 10px;
+                @media screen and (max-width: 640px) {
+                    padding: 30px 0 20px;
+                }
             }
         }
     }
